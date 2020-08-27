@@ -1,0 +1,77 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                 Laptop_01.jpeg  label:                     laptop
+ 3 key:            Bengal_Tiger_01.jpg  label:               bengal tiger
+ 4 key:                     Dog_02.jpg  label:                        dog
+
+     MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+ NOT A MATCH:
+
+                Laptop_01.jpeg: 
+Real:                     laptop   Classifier:      computer keyboard, keypad
+
+           Bengal_Tiger_01.jpg: 
+Real:               bengal tiger   Classifier:         tiger, panthera tigris
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                       malinois
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                Laptop_01.jpeg: 
+Real:                     laptop   Classifier:      computer keyboard, keypad  
+PetLabelDog: 0  ClassLabelDog: 0
+
+           Bengal_Tiger_01.jpg: 
+Real:               bengal tiger   Classifier:         tiger, panthera tigris  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                       malinois  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+
+
+*** Summary statistics (percentages) for CNN Model Architecture VGG ***
+pct_match           : 25.0
+pct_correct_dogs    : 100.0
+pct_correct_breed   : 50.0
+pct_correct_notdogs : 100.0
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:                       malinois
+
+** Total Elapsed Runtime: 0:0:3
